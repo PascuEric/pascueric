@@ -96,7 +96,16 @@
 
 <br><br>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=PascuEric&bg_color=0D1117&color=00FF9D&line=14B86A&point=B7F5D0&area=true&area_color=0B3D2E&hide_border=true&title_color=00D4C8" alt="Activity Graph" width="95%" />
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://github-readme-stats.vercel.app/api?username=PascuEric&show_icons=true&include_all_commits=true&count_private=true&hide_border=false&bg_color=0D1117&title_color=00FF9D&text_color=B7F5D0&icon_color=14B86A&border_color=1F8A4C" alt="GitHub Stats" />
+    </td>
+    <td align="center">
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=PascuEric&layout=compact&hide_border=false&bg_color=0D1117&title_color=00FF9D&text_color=B7F5D0&border_color=1F8A4C" alt="Top Languages" />
+    </td>
+  </tr>
+</table>
 
 <br>
 
