@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="300" viewBox="0 0 1000 300">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#04130d"/>
+      <stop offset="55%" stop-color="#062a1c"/>
+      <stop offset="100%" stop-color="#03231f"/>
+    </linearGradient>
+    <linearGradient id="wave1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00ff9d" stop-opacity="0.55"/>
+      <stop offset="50%" stop-color="#14b86a" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#00d4c8" stop-opacity="0.55"/>
+    </linearGradient>
+    <linearGradient id="wave2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00d4c8" stop-opacity="0.45"/>
+      <stop offset="50%" stop-color="#7cf5a8" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#1f8a4c" stop-opacity="0.5"/>
+    </linearGradient>
+    <linearGradient id="wave3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2ea043" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#00ffc8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#7c5cff" stop-opacity="0.35"/>
+    </linearGradient>
+    <linearGradient id="shimmer" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#b7f5d0"/>
+      <stop offset="40%" stop-color="#ffffff"/>
+      <stop offset="60%" stop-color="#7cf5a8"/>
+      <stop offset="100%" stop-color="#b7f5d0"/>
+    </linearGradient>
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#fff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="round"><rect width="1000" height="300" rx="18"/></clipPath>
+    <mask id="textMask">
+      <text x="500" y="148" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="68" font-weight="800" fill="#fff">Pascu Eric</text>
+    </mask>
+  </defs>
+
+  <g clip-path="url(#round)">
+    <rect width="1000" height="300" fill="url(#bg)"/>
+
+    <!-- Stars -->
+    <g fill="#d9ffe9">
+      <circle cx="80" cy="40" r="1.5"><animate attributeName="opacity" values="0.2;1;0.2" dur="3s" repeatCount="indefinite"/></circle>
+      <circle cx="210" cy="90" r="1"><animate attributeName="opacity" values="1;0.2;1" dur="4s" repeatCount="indefinite"/></circle>
+      <circle cx="340" cy="30" r="1.4"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.6s" repeatCount="indefinite"/></circle>
+      <circle cx="520" cy="55" r="1"><animate attributeName="opacity" values="1;0.3;1" dur="3.4s" repeatCount="indefinite"/></circle>
+      <circle cx="700" cy="35" r="1.6"><animate attributeName="opacity" values="0.2;1;0.2" dur="3.8s" repeatCount="indefinite"/></circle>
+      <circle cx="820" cy="80" r="1.1"><animate attributeName="opacity" values="1;0.2;1" dur="2.9s" repeatCount="indefinite"/></circle>
+      <circle cx="930" cy="45" r="1.4"><animate attributeName="opacity" values="0.3;1;0.3" dur="3.2s" repeatCount="indefinite"/></circle>
+    </g>
+
+    <!-- Aurora waves (blurred, back to front) -->
+    <g filter="url(#blur)">
+      <path fill="url(#wave3)" d="M0 150 C 150 90, 300 210, 500 140 S 850 80, 1000 150 L1000 300 L0 300 Z">
+        <animate attributeName="d" dur="11s" repeatCount="indefinite"
+          values="M0 150 C 150 90, 300 210, 500 140 S 850 80, 1000 150 L1000 300 L0 300 Z;
+                  M0 130 C 150 200, 300 90, 500 160 S 850 200, 1000 120 L1000 300 L0 300 Z;
+                  M0 150 C 150 90, 300 210, 500 140 S 850 80, 1000 150 L1000 300 L0 300 Z"/>
+      </path>
+      <path fill="url(#wave1)" d="M0 190 C 200 120, 350 250, 550 180 S 850 120, 1000 190 L1000 300 L0 300 Z">
+        <animate attributeName="d" dur="8s" repeatCount="indefinite"
+          values="M0 190 C 200 120, 350 250, 550 180 S 850 120, 1000 190 L1000 300 L0 300 Z;
+                  M0 170 C 200 250, 350 130, 550 200 S 850 250, 1000 160 L1000 300 L0 300 Z;
+                  M0 190 C 200 120, 350 250, 550 180 S 850 120, 1000 190 L1000 300 L0 300 Z"/>
+      </path>
+      <path fill="url(#wave2)" d="M0 230 C 180 180, 380 280, 560 225 S 860 190, 1000 235 L1000 300 L0 300 Z">
+        <animate attributeName="d" dur="6s" repeatCount="indefinite"
+          values="M0 230 C 180 180, 380 280, 560 225 S 860 190, 1000 235 L1000 300 L0 300 Z;
+                  M0 215 C 180 275, 380 190, 560 245 S 860 275, 1000 215 L1000 300 L0 300 Z;
+                  M0 230 C 180 180, 380 280, 560 225 S 860 190, 1000 235 L1000 300 L0 300 Z"/>
+      </path>
+    </g>
+
+    <!-- Floating code symbols -->
+    <g font-family="Fira Code, Consolas, monospace" font-weight="700" fill="#7cf5a8" filter="url(#glow)">
+      <text x="90" y="300" font-size="26" opacity="0.8">&lt;/&gt;
+        <animate attributeName="y" values="310;-20" dur="9s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.9;0" dur="9s" repeatCount="indefinite"/>
+      </text>
+      <text x="230" y="300" font-size="22" fill="#00d4c8">{ }
+        <animate attributeName="y" values="310;-20" dur="11s" begin="-3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.9;0" dur="11s" begin="-3s" repeatCount="indefinite"/>
+      </text>
+      <text x="390" y="300" font-size="24">λ
+        <animate attributeName="y" values="310;-20" dur="8s" begin="-5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.9;0" dur="8s" begin="-5s" repeatCount="indefinite"/>
+      </text>
+      <text x="610" y="300" font-size="22" fill="#b7f5d0">#!
+        <animate attributeName="y" values="310;-20" dur="10s" begin="-2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.9;0" dur="10s" begin="-2s" repeatCount="indefinite"/>
+      </text>
+      <text x="760" y="300" font-size="26" fill="#00d4c8">⚙
+        <animate attributeName="y" values="310;-20" dur="12s" begin="-6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.9;0" dur="12s" begin="-6s" repeatCount="indefinite"/>
+      </text>
+      <text x="900" y="300" font-size="22">01
+        <animate attributeName="y" values="310;-20" dur="9.5s" begin="-4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.9;0" dur="9.5s" begin="-4s" repeatCount="indefinite"/>
+      </text>
+    </g>
+
+    <!-- Name with glow + shimmer sweep -->
+    <g filter="url(#glow)">
+      <text x="500" y="148" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="68" font-weight="800" fill="url(#shimmer)">Pascu Eric</text>
+    </g>
+    <g mask="url(#textMask)">
+      <rect y="70" width="160" height="100" fill="url(#sweep)" transform="skewX(-20)">
+        <animate attributeName="x" values="-300;1100" dur="4s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- Description -->
+    <text x="500" y="196" text-anchor="middle" font-family="Fira Code, Consolas, monospace" font-size="20" fill="#b7f5d0">
+      Fullstack developer and data engineer
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
+    </text>
+
+    <!-- Border -->
+    <rect x="1" y="1" width="998" height="298" rx="18" fill="none" stroke="#2ea043" stroke-opacity="0.6" stroke-width="2"/>
+  </g>
+</svg>
